@@ -1,7 +1,7 @@
 # Project-Lion
 
 ## Problem Statement and Background
-The problem we are addressing is the long and manual process of loan approval workflow.The goal of our project is to build a model that classify the loan approval decision based on the loan application data with high accuracy. This will help automate the process of loan application review by the banks and investors. The stretch goal (if time permits) of our project is to build a recommendation system that help applicants make adjustments to their loan application to have a higher chance of getting their loan approved. The recommendation system will associate the current application with several similar approved loans and further identify the areas of the loan information at which may be improved for approval. This will help loan applications to get immediate and free loan application reviews that save both the time and money for the banks and for the applicants.
+Being funny is far too difficult, so why not let a system with no understanding of humor generate jokes for you? The goal of our project is to explore the concept of humor through joke generation via deep neural networks. This model will generate a joke based on an input context. In addition to constructing a humor generating neural net, we plan on analyzing the resulting network to try and understand the semantic features that go into the construction of the jokes.
 
 ## Team
 ### Shun Lin
@@ -16,9 +16,15 @@ The problem we are addressing is the long and manual process of loan approval wo
 ### Sakshi Madan
 4th year EECS student.
 
+## Data Source
+The data will be provided to us through Kaggle. We do not need to access any API to fetch the data in real time. We just have to download the data to our local/remote machine or use Kaggle's online kernel to fetch data stored on Kaggle. There are 231,657 records that were originally scraped from reddit, stupidstuff.org and wocka.com. We will also be filtering out offensive jokes in the data, such as jokes that contain inappropriate words, but there will be enough data for us to train, validate, and test our models.
 
-## Contribution Guideline
+[A dataset of English plaintext jokes](https://github.com/taivop/joke-dataset)
 
-### Download datasets
-Because the datasets we are using from kaggle is too large (~300MB / file), I added a rule to `.gitignore` file to ignore `.csv.gz` files. After pulling code from github please go to Kaggle to download the two datasets `accepted_2007_to_2018Q3.csv.gz` and `rejected_2007_to_2018Q3.csv.gz` from [here](https://www.kaggle.com/wordsforthewise/lending-club) and create a folder call `input` and put those two files in there.
+[Short Jokes Dataset from Kaggle](https://www.kaggle.com/abhinavmoudgil95/short-jokes)
 
+[Anonymous Ratings from the Jester Online Joke Recommender System](http://eigentaste.berkeley.edu/dataset/)
+
+## Evaluation
+
+We evaluate our model by monitoring the loss on our RNN model that we are going to build. We want the loss on the machine generated jokes to be as low as possible on both the validation and test dataset. The ultimate evaluation of our joke generating system is to make people laugh, and not about the score on the RNN model. We can accomplish this evaluation by sending out surveys to real people, asking whether the jokes presented were funny and evaluating the model based on the feedbacks. We will also make sure the jokes are original and do not already exist from the dataset that we trained the network on.
